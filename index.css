@@ -8,6 +8,8 @@ body {
     background-color: #E5E5E5;
 }
 
+/* Cabeçalho */
+
 .barra {
     height: 92px;
     width: 100%;
@@ -118,7 +120,7 @@ body {
     align-items: center;
 }
 
-.barra-inf>div {
+button {
     height: 61px;
     width: 90%;
     background-color: #CBCBCB;
@@ -126,9 +128,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.barra-inf p {
+    border: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 20px;
@@ -136,5 +136,4 @@ body {
     color: #ffffff;
     margin-left: 40px;
     margin-right: 40px;
-    text-align: center;
 }
