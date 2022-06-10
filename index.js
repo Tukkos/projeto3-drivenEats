@@ -35,9 +35,35 @@ function fecharPedido() {
 
     if ((pratoSelec != null) && (bebidaSelec != null) && (sobremesaSelec != null)) {
         const sumir = document.querySelector(".desabilitado");
-        sumir.classList.toggle("escondido");
+        sumir.classList.add("escondido");
 
         const aparecer = document.querySelector(".habilitado");
-        aparecer.classList.toggle("escondido");
+        aparecer.classList.remove("escondido");
     }
+}
+
+function pegarValor(valor) {
+    return valor.innerHTML.replace(",", "").trim() / 100
+}
+
+function pedidoFechado() {
+    const prato = document.querySelector(".card.prato");
+    const valorPrato = pegarValor(prato.querySelector(".valor"));
+
+    const bebida = document.querySelector(".card.bebida");
+    const valorBebida = pegarValor(bebida.querySelector(".valor"));
+
+    const sobremesa = document.querySelector(".card.sobremesa");
+    const valorSobremesa = pegarValor(sobremesa.querySelector(".valor"));
+
+    const total = valorPrato + valorBebida + valorSobremesa;
+    console.log(total.toFixed(2));
+
+    const zapZap = `Olá, gostaria de fazer o pedido:
+    - Prato: ${prato.querySelector("h4").textContent}
+    - Bebida: ${bebida.querySelector("h4").textContent}
+    - Sobremesa: ${sobremesa.querySelector("h4").textContent}
+    Total: R$ ${total.toFixed(2)}`;
+
+    window.open(`https://wa.me/5531985333881?text=${encodeURIComponent(zapZap)}`)
 }
