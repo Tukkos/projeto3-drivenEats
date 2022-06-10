@@ -59,10 +59,10 @@ function pedidoFechado() {
     const total = valorPrato + valorBebida + valorSobremesa;
     console.log(total.toFixed(2));
 
-    const zapZap = `Olá, gostaria de fazer o pedido:
-    - Prato: ${prato.querySelector("h4").textContent}
-    - Bebida: ${bebida.querySelector("h4").textContent}
-    - Sobremesa: ${sobremesa.querySelector("h4").textContent}
+    const zapZap = `Olá, gostaria de fazer o pedido: \n
+    - Prato: ${prato.querySelector("h4").textContent} \n
+    - Bebida: ${bebida.querySelector("h4").textContent} \n
+    - Sobremesa: ${sobremesa.querySelector("h4").textContent} \n
     Total: R$ ${total.toFixed(2)}`;
 
     window.open(`https://wa.me/5531985333881?text=${encodeURIComponent(zapZap)}`)
