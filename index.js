@@ -1,33 +1,24 @@
 function selecionado1(elemento, tipo) {
     const selecao = document.querySelector("." + tipo + ".prato");
-    if (selecao != null) {
+    if (selecao !== null) {
         selecao.classList.remove("prato");
-
+        selecao.lastElementChild.classList.add("esconder");
     }
 
     elemento.classList.add("prato");
+    elemento.lastElementChild.classList.remove("esconder");
     fecharPedido();
-    //~~Trigger da função que trava o tick
-    //tickVerde(this);
 }
-
-// ~~ Function que trava o tick no primeiro item
-// function tickVerde(elemento) {
-//     const tick = document.querySelector("ion-icon");
-//     if (tick !== null) {
-//         tick.style.color = "#ffffff"
-//     }
-
-//     tick.style.color = "#32B72F"
-// }
 
 function selecionado2(elemento, tipo) {
     const selecao = document.querySelector("." + tipo + ".bebida");
     if (selecao != null) {
         selecao.classList.remove("bebida");
+        selecao.lastElementChild.classList.add("esconder");
     }
 
     elemento.classList.add("bebida");
+    elemento.lastElementChild.classList.remove("esconder");
     fecharPedido();
 }
 
@@ -35,9 +26,11 @@ function selecionado3(elemento, tipo) {
     const selecao = document.querySelector("." + tipo + ".sobremesa");
     if (selecao != null) {
         selecao.classList.remove("sobremesa");
+        selecao.lastElementChild.classList.add("esconder");
     }
 
     elemento.classList.add("sobremesa");
+    elemento.lastElementChild.classList.remove("esconder");
     fecharPedido();
 }
 

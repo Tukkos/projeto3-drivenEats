@@ -121,28 +121,28 @@ body {
     justify-content: space-between;
 }
 
+.esconder {
+    display: none;
+}
+
 ion-icon {
     position: absolute;
     bottom: 5px;
     right: 0;
     font-size: 19px;
-    /* Para usar a função que trava o icone
-    color: #ffffff; */
+    color: #32B72F;
 }
 
 .prato {
     border: 5px solid #32B72F;
-    color: #32B72F !important;
 }
 
 .bebida {
     border: 5px solid #32B72F;
-    color: #32B72F !important;
 }
 
 .sobremesa {
     border: 5px solid #32B72F;
-    color: #32B72F !important;
 }
 
 /* Barra Inferior */
