@@ -126,7 +126,8 @@ ion-icon {
     bottom: 5px;
     right: 0;
     font-size: 19px;
-    color: #ffffff;
+    /* Para usar a função que trava o icone
+    color: #ffffff; */
 }
 
 .prato {

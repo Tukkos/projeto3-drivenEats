@@ -2,11 +2,24 @@ function selecionado1(elemento, tipo) {
     const selecao = document.querySelector("." + tipo + ".prato");
     if (selecao != null) {
         selecao.classList.remove("prato");
+
     }
 
     elemento.classList.add("prato");
     fecharPedido();
+    //~~Trigger da função que trava o tick
+    //tickVerde(this);
 }
+
+// ~~ Function que trava o tick no primeiro item
+// function tickVerde(elemento) {
+//     const tick = document.querySelector("ion-icon");
+//     if (tick !== null) {
+//         tick.style.color = "#ffffff"
+//     }
+
+//     tick.style.color = "#32B72F"
+// }
 
 function selecionado2(elemento, tipo) {
     const selecao = document.querySelector("." + tipo + ".bebida");
